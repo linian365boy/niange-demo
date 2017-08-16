@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.example.org/rpcService" 
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	elementFormDefault="qualified">
+	<import namespace="http://www.springframework.org/schema/beans"/>
+	<element name="rpcService">
+		<complexType>
+			<complexContent>
+				<extension base="beans:identifiedType">
+					<attribute name="host" type="string" use="required"/>
+					<attribute name="port" type="int" use="required"/>
+					<attribute name="serviceName" type="string" use="required"/>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+</schema>

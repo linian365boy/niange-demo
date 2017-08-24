@@ -1,13 +1,10 @@
-package com.demo.nian.aop.spring;
+package com.demo.nian.aop;
 
 import java.lang.reflect.Method;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-
-import com.demo.nian.aop.Aspect;
-import com.demo.nian.aop.AspectProxy;
 
 @Aspect(value=Controller.class)  
 public class ControllerAspect extends AspectProxy {

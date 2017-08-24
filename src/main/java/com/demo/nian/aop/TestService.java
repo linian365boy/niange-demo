@@ -1,4 +1,4 @@
-package com.demo.nian.aop.spring;
+package com.demo.nian.aop;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

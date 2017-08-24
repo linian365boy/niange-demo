@@ -12,7 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<org.springframework-version>3.2.4.RELEASE</org.springframework-version>
+		<org.springframework-version>4.3.8.RELEASE</org.springframework-version>
 		<org.slf4j-version>1.7.21</org.slf4j-version>
 	</properties>
 
@@ -148,5 +148,47 @@
   			<artifactId>commons-lang3</artifactId>
   			<version>3.2.1</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>0.10.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>0.11.0.0</version>
+		</dependency>
 	</dependencies>
+	
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+	
+	<profiles>
+  		<!-- 本地，默认激活 ，实现本地测试资源自动替换 -->
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>env</name>
+					<value>local</value>
+				</property>
+			</activation>
+			<build>
+				<filters>
+					<filter>src/main/assembly/local.properties</filter>
+				</filters>
+			</build>
+		</profile>
+	</profiles>
+	
+		
 </project>

@@ -9,6 +9,8 @@ public class TestController {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(TestService.class);  
 	
+	private static TestService testService = BeanHelper.getBean(TestService.class);;
+	
 	public void sayHello(String name){
 		String s = "abc";
 		LOGGER.info(s+"  "+name);
@@ -17,5 +19,6 @@ public class TestController {
 	public void sayHello2(String name){
 		String s = "abc2";
 		LOGGER.info(s+"  "+name);
+		testService.sayHello(name);
 	}
 }

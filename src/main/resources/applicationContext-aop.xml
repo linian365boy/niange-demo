@@ -18,9 +18,7 @@
     	  http://www.springframework.org/schema/task/spring-task-3.1.xsd
     	  http://www.example.org/rpcService
     	  http://www.example.org/rpcService/rpcService.xsd">
-	<context:component-scan base-package="com.demo.nian.aop.spring" />
-	
-	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	<context:component-scan base-package="com.demo.nian.aop" />
 	
 	<!-- 开启aop -->
 	<bean id="aopHelper" class="com.demo.nian.aop.AopHelper"/>

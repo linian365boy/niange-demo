@@ -28,6 +28,10 @@ public class AopHelper {
             LOGGER.error("aop fail", e);  
         }  
     }  
+    
+    public static void initAop(){
+    	LOGGER.info("aop start....");
+    }
   
     private static Map<Class<?>, Set<Class<?>>> createProxyMap() throws Exception {  
         Map<Class<?>, Set<Class<?>>> proxyMap = new HashMap<Class<?>, Set<Class<?>>>();  

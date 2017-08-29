@@ -9,7 +9,7 @@ import java.io.File;
  * 
  * @author tanfan 
  * @version  
- * @since JDK 1.7
+ * @since JDK 1.8
  */
 public class FileFilterTest {
 	

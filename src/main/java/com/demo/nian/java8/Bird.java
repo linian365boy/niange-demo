@@ -7,7 +7,7 @@ package com.demo.nian.java8;
  * 
  * @author tanfan 
  * @version  
- * @since JDK 1.7
+ * @since JDK 1.8
  */
 public interface Bird {
 	void sayHello();

@@ -11,6 +11,7 @@ public class BadClass {
 
     public static void main(String... args) throws Exception {
             StringBuilder sb = new StringBuilder();
+            sb.append(Long.valueOf(1L));
             sb.append(getObject());
             System.out.println(sb.toString());
 	}

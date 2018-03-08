@@ -1,11 +1,21 @@
 package com.demo.nian.javaTest;
 
+import junit.framework.Test;
+import sun.net.spi.nameservice.dns.*;
+
 public class Test5 {
+	
+	public Test5(int i){}
+	
 	public static void main(String[] args) {
-		String str = "中国人";
-		for(int i=0;i<str.length();i++){
-			char keyChar = str.charAt(i);
-			System.out.println(keyChar);
-		}
+		System.out.println(DNSNameService.class.getClassLoader());
+		
+		System.out.println(DNSNameService.class.getClassLoader().getParent());
+		
+		System.out.println(Test.class.getClassLoader());
+		
+		System.out.println(Test.class.getClassLoader().getParent());
+		
+		System.out.println(Test.class.getClassLoader().getParent().getParent());
 	}
 }
